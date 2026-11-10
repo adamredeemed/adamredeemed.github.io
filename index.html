@@ -76,6 +76,15 @@
   .ep { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); text-decoration: none; color: #fff; }
   .ep:first-of-type { border-top: 0; } .ep img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; display: block; }
   .ep b { display: block; font-size: 20px; line-height: 1.25; margin: 2px 0 4px; } .ep:hover b { color: var(--blue2); }
+  .join { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 22px; align-items: start; padding: 26px; border-radius: 20px;
+    background: radial-gradient(70% 90% at 0% 0%, rgba(47,107,255,.22), transparent 60%), var(--card); border: 1px solid #2c3a70; }
+  .join.solo { grid-template-columns: 1fr; }
+  .perks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .perks li { display: grid; gap: 2px; padding-left: 28px; position: relative; } .perks b { color: #fff; font-size: 18px; }
+  .perks li::before { content: ""; position: absolute; left: 0; top: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255,106,43,.18); }
+  .card.give { padding: 22px; border-radius: 16px; background: var(--bg2); border: 1px solid var(--line); } .card.give h3 { margin: 0 0 8px; font: 400 24px var(--display); text-transform: uppercase; }
+  .qgrid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 820px) { .join { grid-template-columns: 1fr; } .qgrid.three { grid-template-columns: 1fr; } }
   .about { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 32px; align-items: start; }
   .about img { width: 100%; height: auto; border-radius: 20px; display: block; border: 1px solid var(--line); }
   .about p { font-size: 18px; color: #d7ddf3; }
@@ -88,7 +97,7 @@
 </style>
 </head>
 <body>
-<header class="nav"><div class="nav-in"><a class="logo" href="/">Adam <b>Redeemed</b></a><a class="l hide-s" href="/#episodes">Episodes</a><a class="l" href="/questions/">Questions</a><a class="l hide-s" href="/#about">About</a><a class="btn primary" href="https://www.youtube.com/@adamredeemed" style="min-height:38px">Watch</a></div></header>
+<header class="nav"><div class="nav-in"><a class="logo" href="/">Adam <b>Redeemed</b></a><a class="l hide-s" href="/#episodes">Episodes</a><a class="l" href="/questions/">Questions</a><a class="l hide-s" href="/#about">About</a><a class="l" href="/#members">Join</a><a class="btn primary" href="https://www.youtube.com/@adamredeemed" style="min-height:38px">Watch</a></div></header>
 <header class="hero"><div class="wrap">
   <div><div class="eyebrow">The Adam Redeemed Podcast</div>
     <h1>Hard questions about <em>Jesus</em>, answered straight<i>.</i></h1>
@@ -103,6 +112,15 @@
   <section id="about"><div class="about"><img src="/assets/adam.jpg" alt="Adam Ascensao, host of The Adam Redeemed Podcast" width="640" height="640" loading="lazy">
     <div><h2 style="margin-top:0">About Adam</h2><p>I&#x27;m Adam Ascensao. For about six years I ran a furniture business in the Boston area that I thought was my future. Then I became convinced God was telling me to shut it down and start a podcast about Jesus, the last thing I&#x27;d ever have picked for myself.</p><p>I grew up Catholic and went through all the classes, but nobody ever showed me what any of it had to do with my life. Years later God brought me to a Pentecostal church, and that opened my eyes big time. I&#x27;ve been following Jesus for about five or six years now, and it changed me for good.</p><p>This show is for people with honest questions: believers, skeptics, and anyone who has wondered why Jesus matters. No pretending to have it all figured out. Just hard questions, answered straight.</p>
       <p class="mut">Why "Adam Redeemed"? What the first Adam broke, Jesus, the last Adam, came to fix. And my name is Adam.</p></div></div></section>
+  <section id="members"><div class="sh"><h2>Founding Members</h2></div>
+    <div class="join solo"><div><p class="lede" style="margin-top:0">Help build this from the start. For $5 a month you get:</p>
+      <ul class="perks"><li><b>Each episode a day early</b><span class='mut'>A private link the day before it goes public.</span></li><li><b>A study guide every week</b><span class='mut'>The episode in two sentences, the scriptures, three questions to talk over, one thing to try.</span></li><li><b>You pick the questions</b><span class='mut'>Every month, members choose the hard question the next episode answers, read out with your first name.</span></li></ul>
+      <p style="margin-top:18px"><a class="btn primary" href="mailto:members@adamredeemed.com?subject=Founding%20Members">Opening this week: email to get first spot</a></p><p class="mut">Cancel anytime. Payments are handled securely by Stripe.</p></div></div></section>
+  <section id="connect"><div class="sh"><h2>Get in touch</h2></div><div class="qgrid three">
+    <a class="qc" href="mailto:hello@adamredeemed.com?subject=Question%20for%20the%20show"><span class="qm">?</span><b>Ask a question</b><span class="mut">Send the hard question you want answered on the show.</span></a>
+    <a class="qc" href="mailto:prayer@adamredeemed.com?subject=Prayer%20request"><span class="qm">✝</span><b>Send a prayer request</b><span class="mut">Adam reads every one himself. If you're in crisis, call or text 988 (US) right now.</span></a>
+    <a class="qc" href="mailto:guests@adamredeemed.com?subject=Be%20a%20guest"><span class="qm">🎙</span><b>Be a guest</b><span class="mut">Have a testimony or a story God wrote? Tell us about it.</span></a>
+  </div></section>
   <section id="listen"><div class="sh"><h2>Listen and follow</h2></div><div class="follow"><a class="btn primary" href="https://www.youtube.com/@adamredeemed"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15.1V8.9L15.6 12z"/></svg>Watch on YouTube</a><a class="btn" href="https://podcasts.apple.com/us/podcast/the-adam-redeemed-podcast/id6816827876"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 13v8M6.3 16.5a8 8 0 1 1 11.4 0"/></svg>Apple Podcasts</a><a class="btn" href="https://open.spotify.com/show/4JdM2W9bufNKHPxe6eRJTx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 9.5c3.5-1 7-.7 10 1M7.5 12.8c3-.8 5.8-.5 8.3.9M8 16c2.3-.5 4.4-.3 6.2.7"/></svg>Spotify</a><a class="btn" href="https://www.instagram.com/adamredeemed">Instagram</a><a class="btn" href="https://www.tiktok.com/@adamredeemed">TikTok</a><a class="btn" href="https://www.threads.com/@adamredeemed">Threads</a><a class="btn" href="https://x.com/adamredeemed">X</a></div>
     <p class="mut" style="margin-top:16px">Have a question you want answered on the show? Email <a href="mailto:hello@adamredeemed.com">hello@adamredeemed.com</a>.</p></section>
   <div class="apps" id="channel-analytics"><h3>Channel Analytics</h3>
