@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adamredeemed.github.io/sitemap.xml
